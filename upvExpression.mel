@@ -1,0 +1,77 @@
+// LEFT ELBOW
+float $a[3] = {LEFT_SHOULDER.translateX, LEFT_SHOULDER.translateY, LEFT_SHOULDER.translateZ};
+float $b[3] = {LEFT_ELBOW.translateX, LEFT_ELBOW.translateY, LEFT_ELBOW.translateZ};
+float $c[3] = {LEFT_HAND.translateX, LEFT_HAND.translateY, LEFT_HAND.translateZ};
+
+float $upv[3] = {
+  (-$a[0] - $c[0]) + (3 * $b[0]),
+  (-$a[1] - $c[1]) + (3 * $b[1]),
+  (-$a[2] - $c[2]) + (3 * $b[2])
+};
+
+LEFT_ELBOW_UPV.translateX = $upv[0];
+LEFT_ELBOW_UPV.translateY = $upv[1];
+LEFT_ELBOW_UPV.translateZ = $upv[2];
+
+// RIGHT ELBOW
+$a[0] = RIGHT_SHOULDER.translateX;
+$a[1] = RIGHT_SHOULDER.translateY;
+$a[2] = RIGHT_SHOULDER.translateZ;
+
+$b[0] = RIGHT_ELBOW.translateX;
+$b[1] = RIGHT_ELBOW.translateY;
+$b[2] = RIGHT_ELBOW.translateZ;
+
+$c[0] = RIGHT_HAND.translateX;
+$c[1] = RIGHT_HAND.translateY;
+$c[2] = RIGHT_HAND.translateZ;
+
+$upv[0] = (-$a[0] - $c[0]) + (3 * $b[0]);
+$upv[1] = (-$a[1] - $c[1]) + (3 * $b[1]);
+$upv[2] = (-$a[2] - $c[2]) + (3 * $b[2]);
+
+RIGHT_ELBOW_UPV.translateX = $upv[0];
+RIGHT_ELBOW_UPV.translateY = $upv[1];
+RIGHT_ELBOW_UPV.translateZ = $upv[2];
+
+// LEFT KNEE
+$a[0] = LEFT_HIP.translateX;
+$a[1] = LEFT_HIP.translateY;
+$a[2] = LEFT_HIP.translateZ;
+
+$b[0] = LEFT_KNEE.translateX;
+$b[1] = LEFT_KNEE.translateY;
+$b[2] = LEFT_KNEE.translateZ;
+
+$c[0] = LEFT_FOOT.translateX;
+$c[1] = LEFT_FOOT.translateY;
+$c[2] = LEFT_FOOT.translateZ;
+
+$upv[0] = (-$a[0] - $c[0]) + (3 * $b[0]);
+$upv[1] = (-$a[1] - $c[1]) + (3 * $b[1]);
+$upv[2] = (-$a[2] - $c[2]) + (3 * $b[2]);
+
+LEFT_KNEE_UPV.translateX = $upv[0];
+LEFT_KNEE_UPV.translateY = $upv[1];
+LEFT_KNEE_UPV.translateZ = $upv[2];
+
+// RIGHT KNEE
+$a[0] = RIGHT_HIP.translateX;
+$a[1] = RIGHT_HIP.translateY;
+$a[2] = RIGHT_HIP.translateZ;
+
+$b[0] = RIGHT_KNEE.translateX;
+$b[1] = RIGHT_KNEE.translateY;
+$b[2] = RIGHT_KNEE.translateZ;
+
+$c[0] = RIGHT_FOOT.translateX;
+$c[1] = RIGHT_FOOT.translateY;
+$c[2] = RIGHT_FOOT.translateZ;
+
+$upv[0] = (-$a[0] - $c[0]) + (3 * $b[0]);
+$upv[1] = (-$a[1] - $c[1]) + (3 * $b[1]);
+$upv[2] = (-$a[2] - $c[2]) + (3 * $b[2]);
+
+RIGHT_KNEE_UPV.translateX = $upv[0];
+RIGHT_KNEE_UPV.translateY = $upv[1];
+RIGHT_KNEE_UPV.translateZ = $upv[2];
